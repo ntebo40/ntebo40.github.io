@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prof. Ntebogang Dinah Moroke | Statistics and Operations Research</title>
+<meta name="description" content="Prof. Ntebogang Dinah Moroke, Full Professor of Statistics and Operations Research at North-West University. Statistical and computational methods for forecasting, risk and early warning in finance, energy, supply chains and health.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ntebogang Dinah Moroke","jobTitle":"Full Professor of Statistics and Operations Research","affiliation":{"@type":"CollegeOrUniversity","name":"North-West University"},"email":"mailto:ntebo.moroke@nwu.ac.za","sameAs":["https://orcid.org/0000-0001-8545-1860","https://scholar.google.com/citations?user=46t6Vx4AAAAJ&hl=en","https://www.researchgate.net/profile/Ntebogang-Moroke","https://www.linkedin.com/in/ntebo-moroke-8a908a43/","https://github.com/ntebo40"]}
+</script>
+<style>
+:root{
+  --bg:#FBF9F4;--surface:#FFFFFF;--text:#14120E;--muted:#58544C;--border:#E3DCCB;
+  --primary:#0F52BA;--btn-bg:#14120E;--btn-ink:#E0B552;
+  --accent:#C9A227;--accent-text:#7A5A12;--sapphire:#0F52BA;--gold:#E0B552;
+  --head-bg:#0E0E10;--head-ink:#F3EEDF;--head-muted:#CFC9BA;--head-border:#3A372F;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --r-s:6px;--r-m:10px;--shadow:0 1px 2px rgba(0,0,0,.06);
+}
+:root[data-theme="dark"]{
+  --bg:#0E0E10;--surface:#17171A;--text:#EDE8DC;--muted:#B0AA9B;--border:#2B2A27;
+  --primary:#E0B552;--btn-bg:#E0B552;--btn-ink:#0E0E10;
+  --accent:#E0B552;--accent-text:#E0B552;--sapphire:#8DB0F5;--gold:#E0B552;
+  --head-bg:#060608;--head-ink:#F3EEDF;--head-muted:#CFC9BA;--head-border:#2B2A27;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 var(--sans)}
+a{color:var(--primary);text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline}
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:3px}
+header.site :focus-visible,footer.site :focus-visible{outline-color:var(--gold)}
+::selection{background:var(--accent);color:#0E0E10}
+.skip{position:absolute;left:-999px;top:8px;background:var(--btn-bg);color:var(--btn-ink);padding:8px 16px;border-radius:var(--r-s);z-index:10}
+.skip:focus{left:16px}
+.frame{max-width:1040px;margin:0 auto;padding:0 16px}
+header.site{background:var(--head-bg);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{font:600 18px var(--serif);color:var(--gold);white-space:nowrap}
+.brand:hover{text-decoration:none}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+nav a{color:var(--head-muted);font-size:15px;padding:8px 0;display:inline-block;border-bottom:2px solid transparent;white-space:nowrap}
+nav a:hover{color:var(--head-ink);text-decoration:none}
+nav a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);font-weight:600}
+.tools{display:flex;gap:8px;align-items:center}
+button{font:inherit;cursor:pointer}
+.btn{display:inline-block;padding:10px 20px;border-radius:var(--r-s);font-weight:600;font-size:16px;border:1px solid var(--primary);min-height:44px}
+.btn.primary{background:var(--btn-bg);color:var(--btn-ink);border-color:var(--btn-bg)}
+.btn.secondary{background:transparent;color:var(--primary)}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.icon-btn{background:transparent;border:1px solid var(--head-border);color:var(--head-ink);border-radius:var(--r-s);min-width:44px;min-height:44px;padding:0 12px;font-size:14px}
+#menu-btn{display:none}
+main{padding:72px 0 96px}
+.read{max-width:760px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0 0 16px}
+h1{font-size:clamp(32px,6vw,52px)}
+h2{font-size:clamp(24px,4vw,34px);margin-top:56px}
+h3{font-size:20px}
+p{margin:0 0 16px}
+.lead{font-size:20px;color:var(--text)}
+.meta{color:var(--muted);font-size:15px}
+.rule{width:56px;height:3px;background:var(--accent);border:0;margin:24px 0}
+.ids{display:flex;flex-wrap:wrap;gap:8px 24px;list-style:none;padding:0;margin:24px 0 0;font-size:15px}
+.ids span{color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-m);padding:24px;box-shadow:var(--shadow)}
+.card h3{margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.tag{display:inline-block;font-size:13px;color:var(--accent-text);border:1px solid var(--accent);border-radius:999px;padding:0 10px;margin-bottom:12px}
+.dtag{display:inline-block;font-size:13px;border:1px solid var(--sapphire);background:rgba(15,82,186,.08);border-radius:999px;padding:0 10px;color:var(--sapphire);font-weight:600;white-space:nowrap}
+.note{border-left:3px solid var(--accent);padding:8px 16px;background:var(--surface);border-radius:0 var(--r-s) var(--r-s) 0;color:var(--muted);font-size:16px}
+ul.plain{padding-left:20px;margin:0 0 16px}
+ul.plain li{margin-bottom:8px}
+.refs{padding-left:24px;margin:0 0 16px}
+.refs li{margin-bottom:14px;font-size:16px}
+.cv{display:grid;grid-template-columns:150px 1fr;gap:10px 24px;margin:0 0 16px}
+.cv dt{color:var(--muted);font-size:15px;padding-top:2px}
+.cv dd{margin:0}
+.bio{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-m);padding:24px;margin:0 0 16px}
+.bio h3{font-size:18px}
+.bio p:last-child{margin-bottom:0}
+ul.links{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:16px 0 0}
+ul.links a{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 16px;font-size:15px;background:var(--surface);min-height:36px;line-height:26px}
+ul.links a:hover{border-color:var(--primary);text-decoration:none}
+footer.site{background:var(--head-bg);border-top:3px solid var(--accent);padding:32px 0;color:var(--head-muted);font-size:15px}
+footer.site a{color:var(--gold)}
+footer.site .frame{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between}
+.page{display:block}
+.js .page{display:none}
+.js .page.active{display:block}
+nav li{position:relative}
+.more-btn{background:transparent;border:0;border-bottom:2px solid transparent;color:var(--head-muted);font:inherit;font-size:15px;padding:8px 0;cursor:pointer;white-space:nowrap}
+.more-btn:hover{color:var(--head-ink)}
+.more-btn.has-current{color:var(--gold);border-bottom-color:var(--gold);font-weight:600}
+#more-menu{display:none;position:absolute;right:0;top:100%;z-index:6;min-width:190px;margin:4px 0 0;padding:8px 16px;list-style:none;flex-direction:column;gap:0;background:var(--head-bg);border:1px solid var(--head-border);border-radius:var(--r-m);box-shadow:0 6px 18px rgba(0,0,0,.35)}
+#more-item.open #more-menu{display:flex}
+#more-menu a{display:block;padding:8px 0}
+#edit-bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:2px solid var(--primary);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 -2px 8px rgba(0,0,0,.08);font-size:14px}
+#edit-bar[hidden]{display:none}
+.ebtn{font:inherit;font-size:14px;padding:8px 12px;min-height:40px;border-radius:var(--r-s);border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer}
+.ebtn.go{background:var(--primary);color:var(--primary-ink);font-weight:600}
+.editing main,.editing footer.site{outline:2px dashed var(--border);outline-offset:-2px}
+.editing main{padding-bottom:150px}
+.editing li[hidden]{display:list-item}
+.editing article[hidden]{display:block}
+.editing li[hidden],.editing article[hidden]{opacity:.6;outline:2px dashed var(--accent);outline-offset:4px}
+.editing li[hidden]::before,.editing article[hidden]::before{content:"Hidden: visitors cannot see this entry";display:block;font-size:13px;color:var(--accent)}
+@media (max-width:900px){
+  #more-item>.more-btn{display:none}
+  #more-menu{display:flex;position:static;border:0;box-shadow:none;padding:0 0 0 16px;margin:0;min-width:0;background:transparent}
+  #menu-btn{display:inline-block}
+  nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--head-bg);border-bottom:1px solid var(--head-border);padding:8px 16px}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0}
+  nav a{padding:12px 0;width:100%;min-height:44px}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  main{padding:48px 0 64px}
+  .cv{grid-template-columns:1fr;gap:0}
+  .cv dt{margin-top:14px}
+}
+@media print{
+  header.site,footer.site,.actions,.skip,#edit-bar{display:none}
+  body{background:#fff;color:#000}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="site">
+  <div class="frame bar">
+    <a class="brand" href="#home">N. D. Moroke</a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#work">Work with me</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li id="more-item">
+          <button class="more-btn" id="more-btn" type="button" aria-expanded="false" aria-controls="more-menu">More &#9662;</button>
+          <ul id="more-menu">
+            <li><a href="#datasets">Datasets</a></li>
+            <li><a href="#supervision">Supervision</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#events">Events</a></li>
+            <!-- ADD A NEW PAGE: add one <li><a href="#yourid">Label</a></li> here (or in the main list above) -->
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Toggle light or dark theme">Theme</button>
+      <button class="icon-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="content" tabindex="-1">
+<div class="frame">
+
+<!-- HOME -->
+<section class="page" id="p-home" aria-labelledby="h-home">
+  <div class="read">
+    <p class="meta">Full Professor of Statistics and Operations Research</p>
+    <h1 id="h-home">Ntebogang Dinah Moroke</h1>
+    <p class="lead">I develop statistical and computational methods that turn complex, noisy data into forecasts, risk measures and early-warning signals, across finance, energy, supply chains and health.</p>
+    <hr class="rule">
+    <p>My methods draw on statistical mechanics, fractal analysis, wavelet signal processing, time-series econometrics and machine learning. I work with data from South Africa, Botswana, the BRICS economies, the United States and global cryptocurrency markets. My current focus is statistical mechanics and physics-informed methods.</p>
+    <p>I am based at North-West University, Mahikeng Campus, South Africa. I welcome conversations with researchers, organisations and students.</p>
+    <div class="actions">
+      <a class="btn primary" href="#research">Read about my research</a>
+      <a class="btn secondary" href="#work">Work with me</a>
+    </div>
+    <ul class="ids" aria-label="Researcher identifiers">
+      <li><span>ORCID</span> <a href="https://orcid.org/0000-0001-8545-1860">0000-0001-8545-1860</a></li>
+      <li><span>Web of Science ResearcherID</span> AAZ-7657-2020</li>
+    </ul>
+    <ul class="links" aria-label="Find me online">
+      <li><a href="https://orcid.org/0000-0001-8545-1860" rel="me noopener" target="_blank">ORCID</a></li>
+      <li><a href="https://scholar.google.com/citations?user=46t6Vx4AAAAJ&amp;hl=en" rel="me noopener" target="_blank">Google Scholar</a></li>
+      <li><a href="https://www.researchgate.net/profile/Ntebogang-Moroke" rel="me noopener" target="_blank">ResearchGate</a></li>
+      <li><a href="https://www.linkedin.com/in/ntebo-moroke-8a908a43/" rel="me noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/ntebo40" rel="me noopener" target="_blank">GitHub</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="p-about" aria-labelledby="h-about">
+  <div class="read">
+    <h1 id="h-about">About</h1>
+    <p class="lead">I am a statistician and operations researcher. I build statistical and computational methods for complex systems under stress, and statistical mechanics is my niche.</p>
+    <p>I have worked at North-West University since 2002 and have been a Full Professor since 2018. I studied there as well: a BCom in 2000, Honours in Statistics in 2001, an MCom in Statistics in 2005 and a PhD in Statistics in 2014.</p>
+    <p>Statistical mechanics gives a language for systems made of many interacting parts that are pushed away from equilibrium. Financial markets, power grids and supply chains are such systems. I use fractal analysis and wavelet methods to measure scaling and structure across time scales, and time-series econometrics and machine learning to forecast and to detect regime changes. I use physics-informed machine learning only where the physical structure of a problem adds something, and I test it against simpler benchmarks.</p>
+    <p>The applications are broad: financial markets and risk in South Africa, the BRICS economies, the United States and global cryptocurrency markets; electricity load, power-system dispatch and bioenergy; pharmaceutical supply chains; HIV/AIDS spatial statistics in Botswana; student attitudes and performance; retail and banking analytics; and sports science. One setting I return to often is the coupling between the JSE and Eskom load-shedding.</p>
+    <p>My current focus is narrowing to statistical mechanics and physics-informed methods, and I expect my work to centre there more and more.</p>
+    <p>Alongside research I have held academic leadership roles at North-West University: Head of Department (2007 to 2010), Programme Leader (2011 to 2014), Research Professor (2015 to 2017), Deputy Dean of the Faculty of Economic and Management Sciences (July 2017 to May 2026) and Acting Executive Dean (March 2021 to April 2022). Since May 2026 I have held no management post and give my time to research and supervision.</p>
+    <p>I have supervised nine doctoral and ten master's graduates to completion, and more than thirty Honours students. I received the Institutional Teaching Excellence Prestige Award in 2012, the Rector's Award for Most Productive Junior Researcher in 2015 and an NRF Knowledge Share Award in 2016.</p>
+    <p>I was principal investigator on a R2 million grant from the DST and CSIR (2020 to 2021) and a key collaborator on a three-year Erasmus+ Mobility Grant with Miskolc University (2022 to 2025). I share my datasets openly on Zenodo, and I serve as Guest Editor, journal reviewer and external examiner.</p>
+    <p>If your work involves forecasting, risk, early-warning or optimisation, see <a href="#work">Work with me</a>.</p>
+
+    <h2>Bios for programmes and editors</h2>
+    <div class="bio">
+      <h3>Short bio</h3>
+      <p>Ntebogang Dinah Moroke is Full Professor of Statistics and Operations Research at North-West University, South Africa. Her research develops statistical and computational methods, grounded in statistical mechanics, fractal analysis and wavelet signal processing, for forecasting, risk and early warning in finance, energy, supply chains and health. She has supervised nine doctoral graduates.</p>
+    </div>
+    <div class="bio">
+      <h3>Full bio</h3>
+      <p>Ntebogang Dinah Moroke is Full Professor of Statistics and Operations Research at North-West University, Mahikeng Campus, South Africa. She holds a PhD in Statistics from North-West University (2014) and has worked there since 2002, including as Head of Department, Programme Leader, Research Professor, Deputy Dean and Acting Executive Dean of the Faculty of Economic and Management Sciences. Her research applies statistical mechanics, fractal analysis, wavelet signal processing, time-series econometrics and machine learning to forecasting, risk and early warning in financial markets, energy systems, supply chains and health, using data from South Africa, Botswana, the BRICS economies, the United States and global markets. She has published in journals including IEEE Access, Entropy, Fractal and Fractional, Risks, Mathematics and the Frontiers series, shares open datasets on Zenodo, and has supervised nine doctoral and ten master's graduates. She is Guest Editor of a Fractal and Fractional Special Issue and a peer reviewer for international journals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="page" id="p-research" aria-labelledby="h-research">
+  <div class="read">
+    <h1 id="h-research">Research</h1>
+    <p class="lead">Complex systems behave differently under stress. My research builds methods to measure that change and to give early warning of it, in settings where data are noisy and decisions matter.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><h3>Statistical mechanics</h3><p>Non-equilibrium statistical mechanics applied to time series from markets, power systems and supply chains.</p></article>
+    <article class="card"><h3>Fractal analysis</h3><p>Scaling, memory and complexity in market behaviour.</p></article>
+    <article class="card"><h3>Wavelet signal processing</h3><p>Separating structure across time scales in noisy market and infrastructure signals.</p></article>
+    <article class="card"><h3>Physics-informed machine learning</h3><p>Used where the physical structure of a problem adds something, and benchmarked against simpler methods.</p></article>
+  </div>
+  <div class="read">
+    <h2>Where I apply it</h2>
+    <p>The methods carry across fields. Published applications use data from South Africa, Botswana, the BRICS economies, the United States and global cryptocurrency markets.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><h3>Finance and risk</h3><p>Volatility and regime detection on the JSE, BRICS exchange rates and stock markets, cryptocurrency liquidity and portfolio risk, and downside-risk and inflation forecasting.</p></article>
+    <article class="card"><h3>Energy</h3><p>Electricity-load and wind-power forecasting, power-system dispatch under load-shedding, and bioenergy grids. Load-shedding is a recurring setting, including its effect on financial markets.</p></article>
+    <article class="card"><h3>Supply chains</h3><p>Spectral and graph methods for detecting connectivity collapse, and for validating explainable AI, in pharmaceutical supply chains. Two published papers.</p></article>
+    <article class="card"><h3>Health and social data</h3><p>Spatial statistics for HIV/AIDS in Botswana, structural equation models of adolescent behaviour, and student attitudes and performance.</p></article>
+    <article class="card"><h3>Business analytics</h3><p>Statistical arbitrage in the retail sector, fraud detection in banking, household debt, and employee turnover and performance.</p></article>
+    <article class="card"><h3>Sports science</h3><p>Fatigue classification in sprint and jump athletes.</p></article>
+  </div>
+  <div class="read">
+    <h2>Open datasets</h2>
+    <p>My datasets are listed on the <a href="#datasets">Datasets</a> page. Each is labelled as measured data, a test data set or simulated data.</p>
+  </div>
+</section>
+
+<!-- DATASETS -->
+<!--
+HOW TO EDIT THIS PAGE
+1. Show a dataset: delete the word  hidden  from its <li hidden> line. Before you do, read the CHECK BEFORE SHOWING note above it.
+2. Correct a dataset: change the text, the label or the DOI inside its <li>.
+3. Add a dataset: copy one whole <li>...</li> block, paste it in the list, and edit it. Keep the word hidden until it is checked.
+4. Label: every dataset must say what it is, for example Measured data, Test data set, Simulated data, Derived from measured series, or Code and replication data.
+5. Rule used here: show a dataset only when its Zenodo record is correct and any paper it supports is published or accepted. Do not name papers that are under review.
+-->
+<section class="page" id="p-datasets" aria-labelledby="h-datasets">
+  <div class="read">
+    <h1 id="h-datasets">Datasets</h1>
+    <p class="lead">Open datasets from my research, each with a persistent DOI.</p>
+    <p class="meta">Datasets are added here once their records have been checked and any paper they support is published or accepted. Each is labelled as measured data, a test data set or simulated data.</p>
+    <ul class="plain" id="dataset-list">
+      <li hidden>
+        <!-- CHECK BEFORE SHOWING: taken from the CV only; the Zenodo record has not been read yet. Confirm counts, type and the related published paper. -->
+        <strong>JSE-Eskom Infrastructure-Coupled Financial Network Dataset v2.0</strong>: 87 securities, January 2015 to December 2025, with Eskom load-shedding stages. <span class="dtag">Measured data</span> <a href="https://doi.org/10.5281/zenodo.20008530">10.5281/zenodo.20008530</a>
+      </li>
+      <li hidden>
+        <!-- CHECK BEFORE SHOWING: Zenodo shows conflicting counts (87, 15, 60 or 66 securities; 2,832, 2,838 or 2,870 days), a 7.9 kB data file, resource type "Peer review", and text naming papers under review. Fix the record first. -->
+        <strong>IST02-IST03 JSE-Eskom Infrastructure-Coupled Financial Network Dataset</strong>: hypergraph edge-weight time series linking JSE securities to Eskom transmission nodes. <span class="dtag">Derived from measured series</span> <a href="https://doi.org/10.5281/zenodo.18925609">10.5281/zenodo.18925609</a>
+      </li>
+      <li hidden>
+        <!-- CHECK BEFORE SHOWING: taken from the CV only; record not read yet. -->
+        <strong>JSE-Cryptocurrency Physics Dataset</strong>: daily BTC, ETH, XRP and BNB series, 2018 to 2025. <span class="dtag">Measured data</span> <a href="https://doi.org/10.5281/zenodo.19072906">10.5281/zenodo.19072906</a>
+      </li>
+      <li hidden>
+        <!-- CHECK BEFORE SHOWING: taken from the CV only; related paper MWSD is under review, so wait for acceptance. -->
+        <strong>MWSD dataset</strong>: wavelet-decomposed JSE series with Hurst exponents. <span class="dtag">Derived from measured series</span> <a href="https://doi.org/10.5281/zenodo.20548797">10.5281/zenodo.20548797</a>
+      </li>
+      <li hidden>
+        <!-- CHECK BEFORE SHOWING: taken from the CV only; related paper GRAFEN-Net is under review, so wait for acceptance. CV says 66 tickers and 2,833 days; confirm. -->
+        <strong>GRAFEN-Net dataset</strong>: JSE panel with graph-attention adjacency matrices. <span class="dtag">Derived from measured series</span> <a href="https://doi.org/10.5281/zenodo.21197615">10.5281/zenodo.21197615</a>
+      </li>
+      <li hidden>
+        <!-- CHECK BEFORE SHOWING: taken from the CV only; record not read yet. -->
+        <strong>IST-04 Financial Metabolomics: code and data repository</strong>: Python scripts, notebooks and spectral methods. <span class="dtag">Code and replication data</span> <a href="https://doi.org/10.5281/zenodo.19339552">10.5281/zenodo.19339552</a>
+      </li>
+    </ul>
+    <p class="note" id="dataset-empty" data-empty="#dataset-list" hidden>More datasets will be added here shortly.</p>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="page" id="p-publications" aria-labelledby="h-pubs">
+  <div class="read">
+    <h1 id="h-pubs">Publications</h1>
+    <p>Published papers only. The full verified record is on <a href="https://orcid.org/0000-0001-8545-1860">ORCID</a>.</p>
+
+    <h2>Journal articles, 2026</h2>
+    <ol class="refs" reversed>
+      <li>Moroke, N.D. (2026). Fuzzy-Gated Stochastic Diffusion for Financial Regime Detection in Fractal Long-Memory Emerging Markets: The SARDINE Continuous-Time TSK Neuro-Fuzzy Framework. <em>Fractal and Fractional</em>, 10, 518. DOI: <a href="https://doi.org/10.3390/fractalfract10080518">10.3390/fractalfract10080518</a></li>
+      <li>Moroke, N.D. (2026). Cognitive Big Data Architecture for Daily Operational Jamming Transition Detection with Low-Latency Inference in Infrastructure-Constrained Financial Markets: The MERI Framework. <em>Big Data and Cognitive Computing</em>, 10(7), 240. DOI: <a href="https://doi.org/10.3390/bdcc10070240">10.3390/bdcc10070240</a></li>
+      <li>Moroke, N.D. (2026). CRISPR-DEO: Bio-Inspired Sparse Gradient Optimisation for Power Systems Dispatch. <em>IEEE Access</em>, 14, 31378&ndash;31406. DOI: <a href="https://doi.org/10.1109/ACCESS.2026.3667829">10.1109/ACCESS.2026.3667829</a></li>
+      <li>Moroke, N.D. (2026). Metabolic Saliency as KL-Divergence Estimator: Sparse Feature Selection in Infrastructure-Coupled Financial Networks Under Load-Shedding Regimes. <em>Entropy</em>, 28, 559. DOI: <a href="https://doi.org/10.3390/e28050559">10.3390/e28050559</a></li>
+      <li>Moroke, N.D. (2026). Deep Reinforcement Learning for Cryptocurrency Portfolio Management: Free-Energy Framework with Geometry-Based Transaction Costs and Efficiency Bounds. <em>Risks</em>, 14(5), 103. DOI: <a href="https://doi.org/10.3390/risks14050103">10.3390/risks14050103</a></li>
+      <li>Moroke, N.D., &amp; Metsileng, L.D. (2026). GEODEX: Geodesic Execution Slippage &ndash; A Statistical Physics Framework for Cryptocurrency Liquidity Risk. <em>Entropy</em>, 28, 705. DOI: <a href="https://doi.org/10.3390/e28060705">10.3390/e28060705</a></li>
+      <li>Moroke, N.D., Makatjane, K., Shoko, C., &amp; Sigauke, C. (2026). Evaluating Forecast Accuracy: A Comparative Error-Based Analysis of ANN and Markov-Switching Models in Inflation Prediction. <em>Journal of Statistics Applications and Probability</em>, 15(3), 579&ndash;597. DOI: <a href="https://doi.org/10.18576/jsap/150315">10.18576/jsap/150315</a></li>
+      <li>Sigauke, C., Moroke, N.D., Makatjane, K., &amp; Shoko, C. (2026). Real-Time Electricity Load Forecasting in South Africa Using SOM-Enriched Deep Learning Ensembles. <em>AIMS Energy</em>, 14(2), 310&ndash;334. DOI: <a href="https://doi.org/10.3934/energy.2026014">10.3934/energy.2026014</a></li>
+      <li>Shoko, C., Moroke, N.D., Sigauke, C., &amp; Makatjane, K. (2026). Real-Time Forecasting of FTSE/JSE-Top40 Using Deep Neural Models: GPT-SNN-PPO vs. LSTM. <em>Romanian Journal of Economics</em>, 62(1), 28&ndash;44.</li>
+      <li>Moroke, N.D. (2026). Spectral Hypergraph Algorithms for Early Detection of Connectivity Collapse with Application to Pharmaceutical Supply Chain Arrest. <em>Algorithms</em>, 19, 542. DOI: <a href="https://doi.org/10.3390/a19070542">10.3390/a19070542</a></li>
+      <li>Moroke, K.M., &amp; Moroke, N.D. (2026). Real-Time Neuromuscular and Metabolic Fatigue Classification in Sprint and Jump Athletes: An Entropy-Informed Computational Framework for Edge Inference. <em>Applied Sciences</em>, 16, 6654. DOI: <a href="https://doi.org/10.3390/app16136654">10.3390/app16136654</a></li>
+      <li>Moroke, N.D., Shoko, C., Sigauke, C., &amp; Makatjane, K. (2026). A Comparison of Deep Learning and Econometric Models for Forecasting Downside Risk in the South African Gold Market. <em>South Asian Journal of Finance</em>, 6(1), 1&ndash;27. DOI: <a href="https://doi.org/10.4038/sajf.v6i1.154">10.4038/sajf.v6i1.154</a></li>
+      <li>Moroke, N.D., &amp; Nwanamidwa, S. (2026). Bayesian Spike-and-Slab Finite Mixture with Adaptive Tail Regularisation for Robust Volatility Regime Identification: Evidence from the Johannesburg Stock Exchange. <em>Mathematical and Computational Applications</em>, 31, 158. DOI: <a href="https://doi.org/10.3390/mca31040158">10.3390/mca31040158</a></li>
+      <li>Moroke, N.D. (2026). A Self-Adaptive Memetic Algorithm with Lyapunov Damping for Stochastic OPF: Evidence from South Africa's Grid Crisis. <em>Frontiers in Applied Mathematics and Statistics</em>, 12, 1924166. DOI: <a href="https://doi.org/10.3389/fams.2026.1924166">10.3389/fams.2026.1924166</a></li>
+      <li>Moroke, N.D. (2026). HK-DeepIV: Heat-Kernel Geometric Diagnostics and Early-Warning Signals for Curvature-Induced Interference in Financial Correlation Networks. <em>Frontiers in Big Data</em>, 9, 1925931. DOI: <a href="https://doi.org/10.3389/fdata.2026.1925931">10.3389/fdata.2026.1925931</a></li>
+      <li>Moroke, N.D. (2026). Ethical Guardrail Bandit Pruning (EGBP): A Fairness-Constrained Reinforcement Learning System for Equitable Governance of Distributed Bioenergy Grids. <em>IET Renewable Power Generation</em>, 20(1), e70373. DOI: <a href="https://doi.org/10.1049/rpg2.70373">10.1049/rpg2.70373</a></li>
+      <li>Moroke, N.D., &amp; Metsileng, L.D. (2026). A Maximum-Entropy Markov-Switching GARCH Framework: Information-Theoretic Bounds for Cryptocurrency Volatility Regime Detection. <em>Mathematics</em>, 14, 3428. DOI: <a href="https://doi.org/10.3390/math14183428">10.3390/math14183428</a></li>
+      <li>Moroke, N.D., &amp; Lebele, M.M. (2026). SpectralGuard: A Spectrally Grounded &lambda;-SHAP Framework for XAI Validity Certification in Pharmaceutical Supply Chain Networks. <em>Frontiers in Artificial Intelligence</em>, 9, 1884880. DOI: <a href="https://doi.org/10.3389/frai.2026.1884880">10.3389/frai.2026.1884880</a></li>
+      <li>Moroke, N.D. (2026). TENSORnet: A Thermodynamically Motivated Entropy Protocol for Infrastructure-Induced Metabolic Arrest Detection in Cross-Asset Financial Networks. <em>Frontiers in Physics</em>, 14, 1943577. DOI: <a href="https://doi.org/10.3389/fphy.2026.1943577">10.3389/fphy.2026.1943577</a></li>
+      <li>Moroke, N.D. (2026). Eskom-Induced Metabolic Arrest in JSE Financial Hypergraphs: A Physics-Informed Entropy Protocol for Systemic Risk Governance. <em>Risks</em>, 14, 159. DOI: <a href="https://doi.org/10.3390/risks14070159">10.3390/risks14070159</a></li>
+      <li>Moroke, N.D. (2026). GWS-STNet: A Contractive Spatio-Temporal Architecture with Metabolic Saliency for Systemic Stress Detection in JSE Equity Markets. <em>Mathematical and Computational Applications</em>, 31, 133. DOI: <a href="https://doi.org/10.3390/mca31040133">10.3390/mca31040133</a></li>
+      <li>Moroke, N.D. (2026). S-NODE-ANF-RRC: Stochastic Neural ODE for Financial Regime Forecasting and False Alarm Control on JSE Equities. <em>Forecasting</em>, 8, 54. DOI: <a href="https://doi.org/10.3390/forecast8040054">10.3390/forecast8040054</a></li>
+      <li>Makatjane, K., Shoko, C., &amp; Moroke, N.D. (2026). Downside Risk of the South African Mining Index: Leveraging the Power of Long Short-Term Memory and Explainable AI. <em>Journal of International Crisis and Risk Communication Research</em>, 8(2).</li>
+    </ol>
+
+    <h2>Journal articles, 2022 to 2025</h2>
+    <ol class="refs">
+      <li>Sigauke, C., Moroke, N.D., Makatjane, K., &amp; Shoko, C. (2025). A Deep Learning Forecasting of Downside Risk: Application of a Combined ESRNN-VAE. <em>Frontiers in Applied Mathematics and Statistics</em>, 11, 1662252. DOI: <a href="https://doi.org/10.3389/fams.2025.1662252">10.3389/fams.2025.1662252</a></li>
+      <li>Makatjane, K., &amp; Moroke, N.D. (2022). Examining stylized facts and trends of FTSE/JSE TOP40: a parametric and Non-Parametric approach. <em>Data Science in Finance and Economics</em>, 2(3), 317&ndash;344. DOI: <a href="https://doi.org/10.3934/DSFE.2022015">10.3934/DSFE.2022015</a></li>
+    </ol>
+
+    <h2>Book chapters</h2>
+    <ol class="refs">
+      <li>Shoko, C., Moroke, N.D., &amp; Makatjane, K. (2024). A Deep Learning Framework for Modelling Temporal Dependencies and Hierarchies in Hourly Electricity Demand Load. In <em>Machine Learning and Computer Vision for Renewable Energy</em> (pp. 42&ndash;65). IGI Global. DOI: <a href="https://doi.org/10.4018/979-8-3693-2355-7.ch003">10.4018/979-8-3693-2355-7.ch003</a></li>
+      <li>Moroke, N.D., &amp; Makatjane, K. (2024). Detecting Aberrations in Renewable Energy With the One-Class Support Vector Machine Model. In <em>Machine Learning and Computer Vision for Renewable Energy</em> (pp. 186&ndash;205). IGI Global. DOI: <a href="https://doi.org/10.4018/979-8-3693-2355-7.ch011">10.4018/979-8-3693-2355-7.ch011</a></li>
+      <li>Makatjane, K., Shoko, C., &amp; Moroke, N.D. (2024). Probabilistic Forecasting of Hourly Wind Power Load in South Africa. In P. Acharjya, S. Koley, &amp; S. Barman (Eds.), <em>Machine Learning and Computer Vision for Renewable Energy</em> (pp. 268&ndash;285). IGI Global. DOI: <a href="https://doi.org/10.4018/979-8-3693-2355-7.ch014">10.4018/979-8-3693-2355-7.ch014</a></li>
+      <li>Moroke, N.D., &amp; Makatjane, K. (2022). Predictive Modelling for Financial Fraud Detection Using Data Analytics: A Gradient-Boosting Decision Tree. In V. Lobo &amp; A. Correia (Eds.), <em>Applications of Machine Learning and Deep Learning for Privacy and Cybersecurity</em> (pp. 25&ndash;45). IGI Global. DOI: <a href="https://doi.org/10.4018/978-1-7998-9430-8.ch002">10.4018/978-1-7998-9430-8.ch002</a></li>
+      <li>Makatjane, K., &amp; Moroke, N.D. (2022). Detecting Bank Financial Fraud in South Africa Using a Logistic Model Tree. In V. Lobo &amp; A. Correia (Eds.), <em>Applications of Machine Learning and Deep Learning for Privacy and Cybersecurity</em> (pp. 148&ndash;174). IGI Global. DOI: <a href="https://doi.org/10.4018/978-1-7998-9430-8.ch008">10.4018/978-1-7998-9430-8.ch008</a></li>
+    </ol>
+
+    <h2>Earlier selected articles</h2>
+    <ol class="refs">
+      <li>Metsileng, L.D., Moroke, N.D., &amp; Tsoku, J.T. (2021). Modeling the Exchange rate volatility using the BRICS GARCH-type models. <em>International Journal of Financial Research</em>, 12(5), 166&ndash;179. DOI: <a href="https://doi.org/10.5430/ijfr.v12n5p166">10.5430/ijfr.v12n5p166</a></li>
+      <li>Makatjane, K.D., &amp; Moroke, N.D. (2021). Predicting Extreme Daily Regime Shifts in Financial Time Series Exchange/Johannesburg Stock Exchange - All Share Index. <em>International Journal of Financial Studies</em>, 9(2), 18. DOI: <a href="https://doi.org/10.3390/ijfs9020018">10.3390/ijfs9020018</a></li>
+      <li>Tsoku, J.T., &amp; Moroke, N.D. (2018). Pairs trading in JSE financial sector. <em>Journal of Statistics and Management Systems</em>, 21(5), 877&ndash;899. DOI: <a href="https://doi.org/10.1080/09720510.2018.1467647">10.1080/09720510.2018.1467647</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CV -->
+<section class="page" id="p-cv" aria-labelledby="h-cv">
+  <div class="read">
+    <h1 id="h-cv">Curriculum vitae</h1>
+    <p class="lead">Full Professor of Statistics and Operations Research, North-West University, Mahikeng Campus, South Africa.</p>
+
+    <h2>Positions</h2>
+    <dl class="cv">
+      <dt>2018 to present</dt><dd><strong>Full Professor</strong>, North-West University</dd>
+      <dt>2017 to May 2026</dt><dd><strong>Deputy Dean</strong>, Faculty of Economic and Management Sciences</dd>
+      <dt>2021 to 2022</dt><dd><strong>Acting Executive Dean</strong> (March 2021 to April 2022), Faculty of Economic and Management Sciences</dd>
+      <dt>2016 to 2017</dt><dd><strong>Associate Professor</strong>, North-West University</dd>
+      <dt>2015 to 2017</dt><dd><strong>Research Professor</strong>, Faculty of Commerce and Administration</dd>
+      <dt>2011 to 2014</dt><dd><strong>Programme Leader</strong>, Statistics and Operations Research</dd>
+      <dt>2007 to 2010</dt><dd><strong>Head of Department</strong>, Statistics and Operations Research</dd>
+      <dt>2006 to 2014</dt><dd><strong>Lecturer</strong>, North-West University</dd>
+      <dt>2002 to 2006</dt><dd><strong>Junior Lecturer</strong>, University of North West</dd>
+    </dl>
+
+    <h2>Education</h2>
+    <dl class="cv">
+      <dt>2014</dt><dd><strong>PhD in Statistics</strong>, North-West University</dd>
+      <dt>2005</dt><dd><strong>MCom in Statistics</strong>, North-West University</dd>
+      <dt>2001</dt><dd><strong>Honours in Statistics</strong>, University of North West</dd>
+      <dt>2000</dt><dd><strong>BCom</strong> (Statistics, Economics and Management), University of North West</dd>
+    </dl>
+
+    <h2>Grants</h2>
+    <dl class="cv">
+      <dt>2020 to 2021</dt><dd><strong>Principal Investigator</strong>, R2 million grant from the DST and CSIR, in collaboration with the North West Provincial Regional Innovation Support Platform and the Office of the Premier</dd>
+      <dt>2022 to 2025</dt><dd><strong>Key collaborator</strong>, three-year Erasmus+ Mobility Grant, GIFT Research Entity and Miskolc University</dd>
+    </dl>
+
+    <h2>Awards</h2>
+    <dl class="cv">
+      <dt>2016</dt><dd><strong>NRF Knowledge Share Award</strong>, SASA/NRF Academic Statistics in Crisis</dd>
+      <dt>2015</dt><dd><strong>Rector's Award for Most Productive Junior Researcher</strong>, North-West University</dd>
+      <dt>2013 and 2014</dt><dd><strong>Faculty Research Contribution Awards</strong>, North-West University</dd>
+      <dt>2012</dt><dd><strong>Institutional Teaching Excellence Prestige Award</strong>, North-West University</dd>
+    </dl>
+
+    <h2>Professional service and membership</h2>
+    <dl class="cv">
+      <dt>Current</dt><dd>External examiner for postgraduate examinations, University of Limpopo and UNISA</dd>
+      <dt>Current</dt><dd>Guest Editor, <em>Fractal and Fractional</em> Special Issue; peer reviewer for many international journals</dd>
+      <dt>2013 to present</dt><dd>Member, South African Statistical Association (SASA)</dd>
+    </dl>
+
+    <p class="meta">Publications are listed on the <a href="#publications">Publications</a> page and on <a href="https://orcid.org/0000-0001-8545-1860">ORCID</a>. References are available on request.</p>
+  </div>
+</section>
+
+<!-- WORK WITH ME -->
+<section class="page" id="p-work" aria-labelledby="h-work">
+  <div class="read">
+    <h1 id="h-work">Work with me</h1>
+    <p class="lead">My methods turn constrained, noisy, real-world data into forecasts, early-warning signals and decisions. I welcome conversations with researchers, organisations and students.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><h3>Forecasting and risk</h3><p>Market, electricity-load and downside-risk forecasting, regime detection and early-warning signals, in published work on the JSE, BRICS exchange rates, gold, mining and cryptocurrency series.</p></article>
+    <article class="card"><h3>Energy and infrastructure</h3><p>Power-system dispatch and optimisation, and how load-shedding feeds through to markets. Published in IEEE Access, IET Renewable Power Generation and the Frontiers series.</p></article>
+    <article class="card"><h3>Supply chains and operations</h3><p>Spectral and graph methods for detecting connectivity collapse and validating explainable AI, applied to pharmaceutical supply chains in two published papers.</p></article>
+    <article class="card"><h3>Health, education and social data</h3><p>Spatial statistics for HIV/AIDS, structural equation models of behaviour, and analysis of student attitudes and performance.</p></article>
+    <article class="card"><h3>Research training</h3><p>Co-supervision of master's and doctoral students. Nine doctoral and ten master's students have completed under my supervision.</p></article>
+  </div>
+  <div class="read">
+    <h2>Ways to work together</h2>
+    <ul class="plain">
+      <li><strong>Research collaboration</strong>: co-authored papers, joint grant applications and shared datasets.</li>
+      <li><strong>Data partnerships</strong>: organisations such as utilities, market operators and financial institutions that hold data and have questions about risk, forecasting or resilience.</li>
+      <li><strong>Students and visitors</strong>: co-supervision, and visiting scholars and students.</li>
+      <li><strong>Applied roles</strong>: advisory, part-time or full-time positions where applied statistics, forecasting and operations research are needed, in any industry.</li>
+    </ul>
+    <h2>Open data and code</h2>
+    <p>I release datasets openly. See the <a href="#datasets">Datasets</a> page for what is available and how each dataset is labelled.</p>
+    <h2>How to start</h2>
+    <p>Send a short email describing your question, your data and your timeline.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:ntebo.moroke@nwu.ac.za?subject=Collaboration%20enquiry">Email me</a>
+      <a class="btn secondary" href="#cv">See my CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- SUPERVISION -->
+<section class="page" id="p-supervision" aria-labelledby="h-sup">
+  <div class="read">
+    <h1 id="h-sup">Supervision</h1>
+    <p>I supervise MCom and PhD students in business statistics and operations research at North-West University. Nine doctoral and ten master's students have completed under my supervision, and I supervised more than thirty Honours students between 2007 and 2015.</p>
+
+    <h2>Completed doctoral students</h2>
+    <ol class="refs" reversed>
+      <li>2021, Dr C. Siyamayambo. <em>Volatility modelling in South African stock prices: A comparative analysis of Univariate GARCH and Multivariate GARCH models.</em></li>
+      <li>2021, Dr D.L. Xaba. <em>The performance of MS-GARCH models: A Bayesian MCMC based estimations.</em></li>
+      <li>2020, Dr K.D. Makatjane. <em>Exploring the efficiency of Extreme Value Theory in measuring financial risk of the South African stock market.</em></li>
+      <li>2020, Dr M.M. Chanza. <em>An Empirical Evaluation of Panel VEC and Panel ARDL Models in Determining Commercial Bank Profitability in South Africa.</em></li>
+      <li>2019, Dr K. Mpeta. <em>Validation and comparison of theory of planned behaviour and integrated behavioural models: A Structural equation modelling approach.</em></li>
+      <li>2018, Prof J.T. Tsoku. <em>Modelling the Volatility of JSE Top 40 Index Option: Statistical Arbitrage strategy.</em></li>
+      <li>2018, Prof L.D. Metsileng. <em>The performance of conditional heteroskedastic VAR enhanced MGARCH models on time varying integrated data.</em></li>
+      <li>2017, Dr T. Mupundu. <em>Spatial Distribution of HIV/AIDS Problem in Botswana.</em></li>
+      <li>2017, Prof T.L. Montshiwa. <em>An Experimental Analysis of the Effect of Sample Size on the Efficiency of Count Data Models.</em></li>
+    </ol>
+
+    <h2>Completed master's students</h2>
+    <ol class="refs" reversed>
+      <li>2018, S.T. Nwanamidwa. <em>Comparative study of Multiple Discriminant and Multinomial Logistic Regression analyses on Statistics students' performance.</em></li>
+      <li>2017, T.M. Nqume. <em>Exploring the Multivariate Vector Autoregressive Moving Average (VARMA) class of models: The study on domestic FDI inflow.</em></li>
+      <li>2017, N.C. Moitse. <em>Discriminatory performance of error metrics in non-linear models: A critical study of Neural Network and Markov Switching Models.</em></li>
+      <li>2017, K.D. Makatjane. <em>The performance of Bayesian VAR enhanced Markov Switching and Logistic Regression models in Monte Carlo simulated data.</em></li>
+      <li>2017, L. Sepato. <em>A comparative analysis of ARCH/GARCH model before and after the removal of outliers.</em></li>
+      <li>2016, A.B. Ncube. <em>Structural equation modelling applied to proposed attitudes-outcomes model: A case of North West University.</em></li>
+      <li>2016, A. Khula. <em>The robustness of exploratory Factor analysis on stock performance: A case in South Africa.</em></li>
+      <li>2015, L.D. Xaba. <em>A Comparative Study of Threshold Autoregressive, Smooth Transition Regression and Markov Switching Autoregressive Models on Stock Price Behaviour.</em></li>
+      <li>2015, T.V. Montshiwa. <em>Analysis of the impact of missing value handling methods on the assumptions of Multiple Linear Regression Analysis.</em></li>
+      <li>2015, T. Mokoma. <em>An analysis of exchange rate volatility in South Africa: A Multivariate Generalized Autoregressive Conditional Heteroscedasticity Approach.</em></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="page" id="p-service" aria-labelledby="h-service">
+  <div class="read">
+    <h1 id="h-service">Editorial and professional service</h1>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <span class="tag">Guest Editor</span>
+      <h3>Fractal and Fractional</h3>
+      <p>Special Issue: "Fractal Structures and Complexity in Financial Markets and Economic Dynamics".</p>
+    </article>
+    <article class="card">
+      <span class="tag">Peer reviewer</span>
+      <h3>Journals</h3>
+      <p>Reviewer for many international journals, including IEEE Access, Mathematics, Entropy, Forecasting, Stats, Wiley journals and Frontiers journals.</p>
+    </article>
+    <article class="card">
+      <span class="tag">External examiner</span>
+      <h3>Universities</h3>
+      <p>Postgraduate examinations for the University of Limpopo and UNISA.</p>
+    </article>
+    <article class="card">
+      <span class="tag">Membership</span>
+      <h3>SASA</h3>
+      <p>Member of the South African Statistical Association since 2013.</p>
+    </article>
+  </div>
+</section>
+
+<!-- BLOG -->
+<!--
+HOW TO ADD A POST: copy one whole <article>...</article> block, paste it in the list, edit it, and delete the word hidden.
+(Or use edit mode: Ctrl+Shift+E, click in the post, then Duplicate entry.)
+-->
+<section class="page" id="p-blog" aria-labelledby="h-blog">
+  <div class="read">
+    <h1 id="h-blog">Blog</h1>
+    <p class="lead">Short notes on my research, methods and teaching.</p>
+  </div>
+  <div class="grid" id="blog-list">
+    <article class="card" hidden><span class="tag">Date</span><h3>Post title</h3><p>Summary of the post.</p></article>
+  </div>
+  <div class="read"><p class="note" data-empty="#blog-list" hidden>The first post will appear here.</p></div>
+</section>
+
+<!-- EVENTS -->
+<!--
+HOW TO ADD AN EVENT: copy one whole <article>...</article> block, paste it in the list, edit it, and delete the word hidden.
+-->
+<section class="page" id="p-events" aria-labelledby="h-events">
+  <div class="read">
+    <h1 id="h-events">Events</h1>
+    <p class="lead">Talks, conferences, workshops and calls.</p>
+  </div>
+  <div class="grid" id="events-list">
+    <article class="card" hidden><span class="tag">Date, place</span><h3>Event name</h3><p>What it is and how to take part.</p></article>
+  </div>
+  <div class="read"><p class="note" data-empty="#events-list" hidden>Upcoming and past events will be listed here.</p></div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="p-contact" aria-labelledby="h-contact">
+  <div class="read">
+    <h1 id="h-contact">Contact</h1>
+    <p><a href="mailto:ntebo.moroke@nwu.ac.za">ntebo.moroke@nwu.ac.za</a></p>
+    <p>Prof. Ntebogang Dinah Moroke<br>North-West University, Mahikeng Campus<br>South Africa</p>
+    <p class="meta">For collaboration enquiries, see <a href="#work">Work with me</a>.</p>
+    <h2>Find me online</h2>
+    <ul class="links" aria-label="Find me online">
+      <li><a href="https://orcid.org/0000-0001-8545-1860" rel="me noopener" target="_blank">ORCID</a></li>
+      <li><a href="https://scholar.google.com/citations?user=46t6Vx4AAAAJ&amp;hl=en" rel="me noopener" target="_blank">Google Scholar</a></li>
+      <li><a href="https://www.researchgate.net/profile/Ntebogang-Moroke" rel="me noopener" target="_blank">ResearchGate</a></li>
+      <li><a href="https://www.linkedin.com/in/ntebo-moroke-8a908a43/" rel="me noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/ntebo40" rel="me noopener" target="_blank">GitHub</a></li>
+    </ul>
+  </div>
+</section>
+
+<!--
+ADD A NEW PAGE (Special Issue, book, course, ...):
+1. Copy any <section class="page" id="p-..."> block above, change the id (keep the p- prefix) and aria-labelledby.
+   For a page whose menu link is #newpage, the section id is p-newpage.
+2. Add a matching <li><a href="#id">Label</a></li> in the nav.
+Nothing else is needed; routing and styling pick it up automatically.
+-->
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="frame">
+    <span>Prof. Ntebogang Dinah Moroke, North-West University, Mahikeng Campus</span>
+    <span><a href="mailto:ntebo.moroke@nwu.ac.za">ntebo.moroke@nwu.ac.za</a> · <a href="https://orcid.org/0000-0001-8545-1860">ORCID</a> · <a href="https://scholar.google.com/citations?user=46t6Vx4AAAAJ&amp;hl=en">Google Scholar</a> · <a href="https://www.researchgate.net/profile/Ntebogang-Moroke">ResearchGate</a> · <a href="https://www.linkedin.com/in/ntebo-moroke-8a908a43/">LinkedIn</a> · <a href="https://github.com/ntebo40">GitHub</a></span>
+  </div>
+</footer>
+
+<div id="edit-bar" role="toolbar" aria-label="Page editor" hidden>
+  <strong>Edit mode</strong>
+  <span>Click any text to change it, then click inside an entry to use the buttons.</span>
+  <button type="button" class="ebtn" data-act="dup">Duplicate entry</button>
+  <button type="button" class="ebtn" data-act="del">Delete entry</button>
+  <button type="button" class="ebtn" data-act="hide">Show or hide entry</button>
+  <button type="button" class="ebtn go" data-act="save">Download updated page</button>
+  <button type="button" class="ebtn" data-act="exit">Exit edit mode</button>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var BASE_TITLE=document.title;
+  var pages=[].slice.call(document.querySelectorAll('.page'));
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var nav=document.getElementById('nav'),menu=document.getElementById('menu-btn');
+  var moreItem=document.getElementById('more-item'),moreBtn=document.getElementById('more-btn');
+  var bar=document.getElementById('edit-bar');
+
+  function refreshEmpty(){
+    [].forEach.call(document.querySelectorAll('[data-empty]'),function(e){
+      var c=document.querySelector(e.getAttribute('data-empty'));
+      var any=!!c&&[].some.call(c.children,function(k){return !k.hidden});
+      e.hidden=any||root.classList.contains('editing');
+    });
+  }
+  function closeMore(){moreItem.classList.remove('open');moreBtn.setAttribute('aria-expanded','false')}
+
+  function show(){
+    var id=(location.hash||'#home').slice(1);
+    if(!pages.some(function(p){return p.id==='p-'+id})) id='home';
+    pages.forEach(function(p){p.classList.toggle('active',p.id==='p-'+id)});
+    links.forEach(function(a){
+      if(a.getAttribute('href')==='#'+id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    moreBtn.classList.toggle('has-current',!!document.querySelector('#more-menu a[aria-current]'));
+    var h=document.querySelector('#p-'+id+' h1'); if(h){document.title=h.textContent+' | N. D. Moroke'}
+    nav.classList.remove('open'); menu.setAttribute('aria-expanded','false'); closeMore();
+    window.scrollTo({top:0,left:0,behavior:'auto'});
+    refreshEmpty();
+  }
+  window.addEventListener('hashchange',show); show();
+
+  menu.addEventListener('click',function(){
+    var o=nav.classList.toggle('open'); menu.setAttribute('aria-expanded',o?'true':'false');
+  });
+  moreBtn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var o=moreItem.classList.toggle('open'); moreBtn.setAttribute('aria-expanded',o?'true':'false');
+  });
+  document.addEventListener('click',function(e){if(!moreItem.contains(e.target)) closeMore()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMore()}});
+
+  var tb=document.getElementById('theme-btn');
+  try{var s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s)}catch(e){}
+  tb.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||'light';
+    var next=cur==='dark'?'light':'dark'; root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+  });
+
+  /* ---------- Edit mode: Ctrl+Shift+E, or open the file with ?edit at the end of the address ---------- */
+  function setEdit(on){
+    root.classList.toggle('editing',on);
+    [].forEach.call(document.querySelectorAll('main,footer.site'),function(n){
+      if(on) n.setAttribute('contenteditable','true'); else n.removeAttribute('contenteditable');
+    });
+    bar.hidden=!on;
+    refreshEmpty();
+  }
+  if(/[?&]edit(\b|=|&|$)/.test(location.search)) setEdit(true);
+  document.addEventListener('keydown',function(e){
+    if(e.ctrlKey&&e.shiftKey&&(e.key==='E'||e.key==='e')){e.preventDefault();setEdit(!root.classList.contains('editing'))}
+  });
+
+  function target(){
+    var sel=window.getSelection(); if(!sel||!sel.anchorNode) return null;
+    var n=sel.anchorNode.nodeType===1?sel.anchorNode:sel.anchorNode.parentElement;
+    return n?n.closest('main li, main article.card, main .bio, main dt, main dd'):null;
+  }
+  function group(t){
+    if(t.tagName==='DT') return [t,t.nextElementSibling];
+    if(t.tagName==='DD') return [t.previousElementSibling,t];
+    return [t];
+  }
+  function cleanCopy(){
+    var c=root.cloneNode(true);
+    c.classList.remove('editing');
+    c.removeAttribute('data-theme');
+    [].forEach.call(c.querySelectorAll('[contenteditable]'),function(n){n.removeAttribute('contenteditable')});
+    [].forEach.call(c.querySelectorAll('.active'),function(n){n.classList.remove('active')});
+    [].forEach.call(c.querySelectorAll('.open'),function(n){n.classList.remove('open')});
+    [].forEach.call(c.querySelectorAll('[aria-current]'),function(n){n.removeAttribute('aria-current')});
+    [].forEach.call(c.querySelectorAll('[aria-expanded]'),function(n){n.setAttribute('aria-expanded','false')});
+    [].forEach.call(c.querySelectorAll('.has-current'),function(n){n.classList.remove('has-current')});
+    var eb=c.querySelector('#edit-bar'); if(eb) eb.setAttribute('hidden','');
+    var t=c.querySelector('title'); if(t) t.textContent=BASE_TITLE;
+    return '<!doctype html>\n'+c.outerHTML;
+  }
+  bar.addEventListener('mousedown',function(e){if(e.target.closest('button')) e.preventDefault()});
+  bar.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    var act=b.getAttribute('data-act');
+    if(act==='exit'){setEdit(false);return}
+    if(act==='save'){
+      var blob=new Blob([cleanCopy()],{type:'text/html'}),a=document.createElement('a');
+      a.href=URL.createObjectURL(blob); a.download='index.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      return;
+    }
+    var t=target();
+    if(!t){alert('Click inside the entry first, then press the button.');return}
+    var g=group(t).filter(Boolean);
+    if(act==='dup'){
+      var ref=g[g.length-1];
+      g.map(function(x){return x.cloneNode(true)}).forEach(function(c){ref.after(c);ref=c});
+    } else if(act==='del'){
+      if(confirm('Delete this entry?')) g.forEach(function(x){x.remove()});
+    } else if(act==='hide'){
+      if(t.tagName==='LI'||t.tagName==='ARTICLE'){t.hidden=!t.hidden}
+      else alert('Only list entries and cards can be hidden.');
+    }
+    refreshEmpty();
+  });
+})();
+</script>
+</body>
+</html>
