@@ -149,6 +149,52 @@ figure.portrait img{display:block;width:100%;height:auto;aspect-ratio:3/4;object
   .metrics{border:1px solid #999;break-inside:avoid}
   h2,dt{break-after:avoid} li,dl>*{break-inside:avoid}
 }
+@media print{
+  body.print-full main>.frame{display:flex;flex-direction:column}
+  body.print-full .page{display:none!important}
+  body.print-full #p-cv,body.print-full #p-supervision,body.print-full #p-service,body.print-full #p-publications{display:block!important}
+  body.print-full #p-cv{order:1} body.print-full #p-supervision{order:2} body.print-full #p-service{order:3} body.print-full #p-publications{order:4}
+  body.print-full .page{break-before:page}
+  body.print-full #p-cv{break-before:auto}
+  body.print-full .refs li{font-size:10pt;margin-bottom:4pt}
+  body.print-full .read{max-width:none}
+  body.print-full .grid{display:block}
+  body.print-full .card{border:0;padding:0;margin:0 0 8pt;box-shadow:none;break-inside:avoid}
+}
+@page{size:A4;margin:11mm 12mm}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:9.5pt;line-height:1.3;color:#14120E}
+  main{padding:0!important}
+  .print-only{display:flex;justify-content:space-between;align-items:center;gap:16pt;background:#0E0E10;color:#F3EEDF;padding:16pt 18pt;border:0;border-bottom:4pt solid #C9A227;margin:0 0 10pt;border-radius:0}
+  .print-only h2{font:700 24pt/1.1 Georgia,"Iowan Old Style",serif;color:#E0B552;margin:0 0 4pt;border:0;padding:0}
+  .print-only p{margin:1pt 0;font-size:9.5pt;color:#F3EEDF}
+  .print-only .sub{font-size:12pt;color:#FFFFFF;margin-bottom:4pt}
+  .print-only .plinks{margin-top:6pt;font-size:7.5pt;line-height:1.35;color:#CFC9BA}
+  .print-only img{width:76pt;height:76pt;background:#fff;padding:4pt;border-radius:4pt;flex:none}
+  a{color:#0F52BA}
+  .metrics{display:block;margin:0 0 8pt;padding:5pt 10pt;background:#FBF3DC;border:0;border-left:4pt solid #C9A227;border-radius:0}
+  .metrics h2{display:inline;margin:0 8pt 0 0;font:700 9pt Georgia,serif;color:#7A5A12;text-transform:uppercase;letter-spacing:.06em;border:0;padding:0}
+  .metrics dl{display:inline-grid;grid-template-columns:auto auto;gap:0 14pt;font-size:9pt;vertical-align:top}
+  .metrics dt{color:#7A5A12}
+  .metrics .meta{margin:2pt 0 0;font-size:7.5pt;color:#58544C}
+  .read p,.read ul,.read ol,.read dl{margin-top:0}
+  h2{font:700 12pt/1.2 Georgia,"Iowan Old Style",serif;color:#14120E;margin:10pt 0 4pt;padding:0 0 2pt;border-bottom:1.5pt solid #C9A227;break-after:avoid}
+  h3{font-size:10pt;margin:4pt 0 1pt}
+  p{margin:0 0 4pt}
+  ul.plain{margin:0;padding-left:12pt} ul.plain li{margin:0 0 2pt}
+  dl.cv{display:block;margin:0;overflow:visible}
+  dl.cv dt{float:left;clear:left;width:78pt;font-size:8.5pt;color:#0F52BA;font-weight:600;margin:0;padding-top:1pt}
+  dl.cv dd{margin:0 0 2pt 88pt;min-height:11pt}
+  .refs{margin:0;padding-left:16pt}
+  body.print-full .refs li{font-size:8.5pt;line-height:1.25;margin:0 0 2.5pt}
+  body.print-full .page{break-before:auto}
+  body.print-full #p-cv h1,body.print-full #p-cv .lead{display:none}
+  body.print-full .read h1{font:700 14pt Georgia,serif;color:#14120E;margin:12pt 0 4pt;padding:0 0 2pt;border-bottom:2.5pt solid #C9A227}
+  body.print-full .read .lead,body.print-full .read>p.meta{font-size:9pt;margin:0 0 4pt}
+  body.print-full .card{margin:0 0 4pt}
+  .tag{font-size:8pt;color:#0F52BA}
+}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -218,10 +264,10 @@ figure.portrait img{display:block;width:100%;height:auto;aspect-ratio:3/4;object
     <div class="metrics" id="metrics">
       <h2>Research metrics</h2>
       <dl>
-        <dt>Google Scholar</dt><dd>513 citations (371 since 2021) &middot; h-index 13 &middot; i10-index 19</dd>
-        <dt>ResearchGate</dt><dd>390 citations &middot; h-index 11 &middot; 14,694 reads</dd>
+        <dt>Google Scholar</dt><dd>515 citations (373 since 2021) &middot; h-index 13 &middot; i10-index 19</dd>
+        <dt>ResearchGate</dt><dd>391 citations &middot; h-index 11 &middot; 14,696 reads</dd>
       </dl>
-      <p class="meta">As of 29 October 2026. Source: my Google Scholar and ResearchGate profiles.</p>
+      <p class="meta">As of 30 October 2026. Source: my Google Scholar and ResearchGate profiles.</p>
     </div>
   </div>
 </section>
@@ -356,11 +402,11 @@ HOW TO EDIT THIS PAGE
       <li>Moroke, N.D. (2026). Eskom-Induced Metabolic Arrest in JSE Financial Hypergraphs: A Physics-Informed Entropy Protocol for Systemic Risk Governance. <em>Risks</em>, 14, 159. DOI: <a href="https://doi.org/10.3390/risks14070159">10.3390/risks14070159</a></li>
       <li>Moroke, N.D. (2026). GWS-STNet: A Contractive Spatio-Temporal Architecture with Metabolic Saliency for Systemic Stress Detection in JSE Equity Markets. <em>Mathematical and Computational Applications</em>, 31, 133. DOI: <a href="https://doi.org/10.3390/mca31040133">10.3390/mca31040133</a></li>
       <li>Moroke, N.D. (2026). S-NODE-ANF-RRC: Stochastic Neural ODE for Financial Regime Forecasting and False Alarm Control on JSE Equities. <em>Forecasting</em>, 8, 54. DOI: <a href="https://doi.org/10.3390/forecast8040054">10.3390/forecast8040054</a></li>
-      <li>Makatjane, K., Shoko, C., &amp; Moroke, N.D. (2026). Downside Risk of the South African Mining Index: Leveraging the Power of Long Short-Term Memory and Explainable AI. <em>Journal of International Crisis and Risk Communication Research</em>, 8(2).</li>
     </ol>
 
     <h2>Journal articles, 2022 to 2025</h2>
     <ol class="refs">
+      <li>Makatjane, K., Shoko, C., &amp; Moroke, N.D. (2025). Downside Risk of the South African Mining Index: Leveraging the Power of Long Short-Term Memory and Explainable AI. <em>The Journal of International Crisis and Risk Communication Research (JICRCR)</em>, 8(2), 130.</li>
       <li>Sigauke, C., Moroke, N.D., Makatjane, K., &amp; Shoko, C. (2025). A Deep Learning Forecasting of Downside Risk: Application of a Combined ESRNN-VAE. <em>Frontiers in Applied Mathematics and Statistics</em>, 11, 1662252. DOI: <a href="https://doi.org/10.3389/fams.2025.1662252">10.3389/fams.2025.1662252</a></li>
       <li>Makatjane, K., &amp; Moroke, N.D. (2022). Examining stylized facts and trends of FTSE/JSE TOP40: a parametric and Non-Parametric approach. <em>Data Science in Finance and Economics</em>, 2(3), 317&ndash;344. DOI: <a href="https://doi.org/10.3934/DSFE.2022015">10.3934/DSFE.2022015</a></li>
     </ol>
@@ -370,11 +416,11 @@ HOW TO EDIT THIS PAGE
       <li>Shoko, C., Moroke, N.D., &amp; Makatjane, K. (2024). A Deep Learning Framework for Modelling Temporal Dependencies and Hierarchies in Hourly Electricity Demand Load. In <em>Machine Learning and Computer Vision for Renewable Energy</em> (pp. 42&ndash;65). IGI Global. DOI: <a href="https://doi.org/10.4018/979-8-3693-2355-7.ch003">10.4018/979-8-3693-2355-7.ch003</a></li>
       <li>Moroke, N.D., &amp; Makatjane, K. (2024). Detecting Aberrations in Renewable Energy With the One-Class Support Vector Machine Model. In <em>Machine Learning and Computer Vision for Renewable Energy</em> (pp. 186&ndash;205). IGI Global. DOI: <a href="https://doi.org/10.4018/979-8-3693-2355-7.ch011">10.4018/979-8-3693-2355-7.ch011</a></li>
       <li>Makatjane, K., Shoko, C., &amp; Moroke, N.D. (2024). Probabilistic Forecasting of Hourly Wind Power Load in South Africa. In P. Acharjya, S. Koley, &amp; S. Barman (Eds.), <em>Machine Learning and Computer Vision for Renewable Energy</em> (pp. 268&ndash;285). IGI Global. DOI: <a href="https://doi.org/10.4018/979-8-3693-2355-7.ch014">10.4018/979-8-3693-2355-7.ch014</a></li>
-      <li>Moroke, N.D. (2023). Exploring the relationship between employee turnover and performance: a review of systematic literature. In <em>The necessities for talent and skills enhancement in the workplace</em>, Global Innovative Forefront Talent Management, Vol. 3. Axiom Academic Publishers. ISBN 978-1-991239-21-1.</li>
+      <li>Moroke, N.D. (2023). Exploring the relationship between employee turnover and performance: a review of systematic literature. In A.M.F. Pelser, S. Nagy, J. Thondlana, &amp; I.J. Oosthuizen (Eds.), <em>The necessities for talent and skills enhancement in the workplace</em>, Global Innovative Forefront Talent Management, Vol. 3 (Chapter 8, pp. 206&ndash;224). Axiom Academic Publishers. ISBN 978-1-991239-21-1.</li>
       <li>Mupundu, T., Moroke, N.D., &amp; Munapo, E. (2023). Spatial Autocorrelation Analysis of HIV/AIDS in Botswana. In <em>Research Trends in Mathematics and Statistics</em> (pp. 35–48). AkiNik Publications, New Delhi. ISBN 978-93-5570-852-6.</li>
       <li>Moroke, N.D., &amp; Makatjane, K. (2022). Predictive Modelling for Financial Fraud Detection Using Data Analytics: A Gradient-Boosting Decision Tree. In V. Lobo &amp; A. Correia (Eds.), <em>Applications of Machine Learning and Deep Learning for Privacy and Cybersecurity</em> (pp. 25&ndash;45). IGI Global. DOI: <a href="https://doi.org/10.4018/978-1-7998-9430-8.ch002">10.4018/978-1-7998-9430-8.ch002</a></li>
       <li>Makatjane, K., &amp; Moroke, N.D. (2022). Detecting Bank Financial Fraud in South Africa Using a Logistic Model Tree. In V. Lobo &amp; A. Correia (Eds.), <em>Applications of Machine Learning and Deep Learning for Privacy and Cybersecurity</em> (pp. 148&ndash;174). IGI Global. DOI: <a href="https://doi.org/10.4018/978-1-7998-9430-8.ch008">10.4018/978-1-7998-9430-8.ch008</a></li>
-      <li>Chanza, M., Moroke, N.D., Pelser, A., Klinck, K., &amp; Motjolopane, I. (2022). Data Analytics and Machine Learning Enhanced Talent Risk Management. In <em>Aspects of Talent Management in the Workplace Environment of the 2020s</em>, Vol. 1 (pp. 100–125). Axiom Academic Publishers.</li>
+      <li>Chanza, M., Moroke, N.D., Pelser, A.M.F., Klinck, K., &amp; Motjolopane, I. (2021). Data Analytics and Machine Learning Enhanced Talent Risk Management. In A.M.F. Pelser, V. Vaiman, &amp; S. Nagy (Eds.), <em>Aspects of Talent Management in the Workplace Environment of the 2020s</em>, Vol. 1 (pp. 100&ndash;125). Axiom Academic Publishers. ISBN 978-1-77630-441-7.</li>
     </ol>
 
     <h2>Journal articles, 2013 to 2021</h2>
@@ -450,26 +496,38 @@ HOW TO EDIT THIS PAGE
 <section class="page" id="p-cv" aria-labelledby="h-cv">
   <div class="read">
     <div class="print-only" aria-hidden="true">
-      <div>
+      <div class="pt">
         <h2>Prof. Ntebogang Dinah Moroke</h2>
-        <p>Full Professor of Statistics and Operations Research</p>
+        <p class="sub">Full Professor of Statistics and Operations Research</p>
         <p>North-West University, Mahikeng Campus, South Africa</p>
-        <p>ntebo.moroke@nwu.ac.za &middot; ORCID 0000-0001-8545-1860</p>
-        <p>ntebo40.github.io</p>
+        <p>ntebo.moroke@nwu.ac.za &nbsp;&middot;&nbsp; ntebo40.github.io</p>
+        <p class="plinks">Google Scholar: scholar.google.com/citations?user=46t6Vx4AAAAJ<br>ResearchGate: researchgate.net/profile/Ntebogang-Moroke &nbsp;&middot;&nbsp; ORCID: orcid.org/0000-0001-8545-1860<br>LinkedIn: linkedin.com/in/ntebo-moroke-8a908a43 &nbsp;&middot;&nbsp; GitHub: github.com/ntebo40</p>
       </div>
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAIAAAD2HxkiAAAEd0lEQVR42u3dMXIUMRCG0X8p5wQU9z8gRcAJxAlgA1nubs17ubF32K80QVfrtdYKUOebRwAiBBECIgQRAiIEEQIiBBECIgQRAiIEEQIiBBECIgQRAiIEEQIihGt9bP78zx/fr3wuv37/qfrU///Vb3/75o/PfW5tvy1OQvA6CogQRAiIEEQIiBBECIgQctnETE5OEhy1M72x+bk2B0eOTqV0HhUa+m1xEoLXUUCEIEJAhCBCQIQgQkCEkEdNzKTrspPRCnfM1D7VW78wTkLwOgoiBEQIIgRECCIERAgiBEQIMbZGCuen3v7jR3cxHd0ThZMQRAiIEEQIiBBECIgQRAiIEGJi5pkKrx8r/+04CUGEgAhBhIAIQYSACEGEgAghT56YuXgfyc5Hq30snf9Tbv3COAlBhCBCQIQgQkCEIEJAhCBCQIQQY2sZcYVYLr1Z7e1wVuGPb17b5tviJAQRAiIEEQIiBBECIgQRAiKEDl5rLU8hnz3bcXQl0ebEDE5CQIQgQkCEIEJAhCBCQIQgQogdM5k5vXF01UouvXftsU9186Ed/Z47CcHrKIgQECGIEBAhiBAQIYgQECHE2FruuEIsdZd4FU5vdZ4sOzo7NncA00kIXkdBhIAIQYSACEGEgAhBhECeMzGzecFY501NO3/56bvNdv622jvh5t5m5yQEr6OACEGEgAhBhIAIQYSACCHPmZg5es+WG8Jy11qgzYe2+Y/bMQNeRwERgggBEYIIARGCCAERggiBL/Jaa+XG66ZqZ6CO3rtWuLCodhyv7eKvzWfuJASvoyBCQIQgQkCEIEJAhCBCILMmZtou9knvi7gKt0h1vratcADLoifwOgqIEEQIiBBECIgQRAiIEEQI5IZFT7n0srvRf/nRhUiFG65qlzU5CcHrKCBCECEgQhAhIEIQISBCGOQjjbch7Qwx1N4QdvQvn3sHWOeL0yx6Aq+jgAhBhIAIQYSACEGEgAghdsykwV6Qo7tYMna2o/Oo0Fx2zIDXUUCEIEJAhCBCQIQgQkCEIEIgrkbL0DvbMvmGsDQe/ircxeQkBK+jgAhBhIAIQYSACEGEgAghrkbL7Zt/NscvOs92FE7z3Dry4iQEEQIiBBECIgQRAiIEEQIihDxqYiZdr5vKyeGPo5/r7T9+dO6k8K67ucNbm5/LSQheR0GEgAhBhIAIQYSACEGEgAghxtbSf3AsT52Qqr1g7O0Hn/tkCkcsnYTgdRRECIgQRAiIEEQIiBBECOQ5EzO59+I0w0DjLnUrXPzlJASvoyBCQIQgQkCEIEJAhCBCICZmyNhxnMK5k80b445eOOckBK+jgAhBhIAIQYSACEGEgAhBhEBajK0VXkaVxguL3k5+FS562vzVmx/81gVWTkIQIYgQECGIEBAhiBAQIYgQ+GKvtVYuHUTIzNmOzpua5g45dd6O5SQEr6MgQkCEIEJAhCBCQIQgQiCzJmYAJyGIEBAhiBAQIYgQECGIEBAhiBAQIYgQECGIEBAhiBAQIYgQECGIEPiHv3HedjHHi1AhAAAAAElFTkSuQmCC" alt="">
     </div>
     <h1 id="h-cv" class="no-print">Curriculum vitae</h1>
     <p class="lead no-print">Full Professor of Statistics and Operations Research, North-West University, Mahikeng Campus, South Africa.</p>
-    <p class="cv-actions"><button class="btn primary" id="print-cv" type="button">Download CV (PDF)</button> <span class="meta">In the window that opens, choose &ldquo;Save as PDF&rdquo; as the printer.</span></p>
-    <div class="metrics">
+    <p class="cv-actions"><button class="btn primary" id="print-cv" type="button">Download CV (PDF)</button> <span class="meta">Includes your profile, career, supervision, service and all publications. In the window that opens, choose &ldquo;Save as PDF&rdquo; as the printer.</span></p>
+    <div class="metrics" id="cv-metrics">
       <h2>Research metrics</h2>
       <dl>
-        <dt>Google Scholar</dt><dd>513 citations (371 since 2021) &middot; h-index 13 &middot; i10-index 19</dd>
-        <dt>ResearchGate</dt><dd>390 citations &middot; h-index 11 &middot; 14,694 reads</dd>
+        <dt>Google Scholar</dt><dd>515 citations (373 since 2021) &middot; h-index 13 &middot; i10-index 19</dd>
+        <dt>ResearchGate</dt><dd>391 citations &middot; h-index 11 &middot; 14,696 reads</dd>
       </dl>
-      <p class="meta">As of 29 October 2026. Source: my Google Scholar and ResearchGate profiles.</p>
+      <p class="meta">As of 30 October 2026. Source: my Google Scholar and ResearchGate profiles.</p>
     </div>
+
+    <h2>Profile</h2>
+    <p id="cv-profile">Ntebogang Dinah Moroke is Full Professor of Statistics and Operations Research at North-West University, South Africa. Her research develops statistical and computational methods, grounded in statistical mechanics, fractal analysis and wavelet signal processing, for forecasting, risk and early warning in finance, energy, supply chains and health. She has supervised nine doctoral graduates.</p>
+
+    <h2>Areas of expertise</h2>
+    <ul class="plain">
+      <li><strong>Methods:</strong> time-series econometrics, forecasting and early-warning systems, statistical mechanics and physics-informed methods, fractal and wavelet analysis, machine learning and deep learning, stochastic processes, graph and network methods, multivariate analysis, optimisation and operations research.</li>
+      <li><strong>Applications:</strong> financial markets and risk, energy and power systems, pharmaceutical and other supply chains, health and social data, business analytics, sports science.</li>
+      <li><strong>Data from:</strong> South Africa, Botswana, the BRICS economies, the United States and global cryptocurrency markets.</li>
+      <li><strong>Leadership and practice:</strong> strategy and programme development, research management, grant acquisition and management, postgraduate supervision, curriculum development, community engagement and stakeholder partnerships.</li>
+      <li><strong>Tools:</strong> Python and R, with Jupyter notebooks and replication code for reproducible research.</li>
+    </ul>
 
     <h2>Positions</h2>
     <dl class="cv">
@@ -752,11 +810,17 @@ Nothing else is needed; routing and styling pick it up automatically.
       e.hidden=any||root.classList.contains('editing');
     });
   }
-  var pb=document.getElementById('print-cv');
+  var pb=document.getElementById('print-cv'),fullPrint=false,oldTitle=document.title;
   if(pb){
-    var oldTitle=document.title;
-    pb.addEventListener('click',function(){oldTitle=document.title;document.title='Moroke_CV';window.print();setTimeout(function(){document.title=oldTitle},1000)});
+    pb.addEventListener('click',function(){fullPrint=true;window.print()});
+    window.addEventListener('beforeprint',function(){if(fullPrint){oldTitle=document.title;document.title='Moroke_CV';document.body.classList.add('print-full')}});
+    window.addEventListener('afterprint',function(){document.body.classList.remove('print-full');document.title=oldTitle;fullPrint=false});
   }
+  var hm=document.getElementById('metrics'),cm=document.getElementById('cv-metrics');
+  if(hm&&cm){var a=hm.querySelector('dl'),b=cm.querySelector('dl'),c=hm.querySelector('.meta'),d=cm.querySelector('.meta');
+    if(a&&b) b.innerHTML=a.innerHTML; if(c&&d) d.innerHTML=c.innerHTML;}
+  var sb=document.querySelector('#p-about .bio p'),cp=document.getElementById('cv-profile');
+  if(sb&&cp&&sb.textContent.trim()) cp.textContent=sb.textContent.trim();
   function closeMore(){moreItem.classList.remove('open');moreBtn.setAttribute('aria-expanded','false')}
 
   function show(){
